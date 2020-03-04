@@ -79,11 +79,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="JavaScript遍历对象的几种方式1. 自身可枚举属性 Object.keys()方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和for...in循环遍历该对象时返回的顺序一致。如果对象的键-值都不可枚举，那么将返回由键组成的数组。  这是合理的，因为大多数时候只需要关注对象自身的属性。 来看看一个对象拥有自身和继承属性的例子，Object.keys()只返回自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6——遍历对象属性的几种方式">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/ES6%E2%80%94%E2%80%94%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaScript遍历对象的几种方式1. 自身可枚举属性 Object.keys()方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和for...in循环遍历该对象时返回的顺序一致。如果对象的键-值都不可枚举，那么将返回由键组成的数组。  这是合理的，因为大多数时候只需要关注对象自身的属性。 来看看一个对象拥有自身和继承属性的例子，Object.keys()只返回自">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-04T07:49:23.000Z">
+<meta property="article:modified_time" content="2020-03-04T07:49:58.692Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/04/ES6——遍历对象属性的几种方式/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>ES6——遍历对象属性的几种方式 | Hexo</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/04/ES6%E2%80%94%E2%80%94%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" itemprop="url">ES6——遍历对象属性的几种方式</a></h1>
+          <h1 class="post-title" itemprop="name headline">ES6——遍历对象属性的几种方式</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <h3 id="JavaScript遍历对象的几种方式"><a href="#JavaScript遍历对象的几种方式" class="headerlink" title="JavaScript遍历对象的几种方式"></a>JavaScript遍历对象的几种方式</h3><h4 id="1-自身可枚举属性"><a href="#1-自身可枚举属性" class="headerlink" title="1. 自身可枚举属性"></a>1. 自身可枚举属性</h4><blockquote>
+        <h3 id="JavaScript遍历对象的几种方式"><a href="#JavaScript遍历对象的几种方式" class="headerlink" title="JavaScript遍历对象的几种方式"></a>JavaScript遍历对象的几种方式</h3><h4 id="1-自身可枚举属性"><a href="#1-自身可枚举属性" class="headerlink" title="1. 自身可枚举属性"></a>1. 自身可枚举属性</h4><blockquote>
 <p><code>Object.keys()</code>方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和<code>for...in</code>循环遍历该对象时返回的顺序一致。如果对象的键-值都不可枚举，那么将返回由键组成的数组。</p>
 </blockquote>
 <p>这是合理的，因为大多数时候只需要关注对象自身的属性。</p>
@@ -379,8 +378,6 @@
 <li><code>Object.assign()</code>： 忽略enumerable为false的属性，只拷贝对象自身的可枚举的属性</li>
 </ol>
 
-          
-        
       
     </div>
     
@@ -397,164 +394,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/04/ES6%E2%80%94%E2%80%94class%E8%AF%AD%E6%B3%95%E7%B3%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/04/ES6%E2%80%94%E2%80%94class%E8%AF%AD%E6%B3%95%E7%B3%96/" itemprop="url">ES6——class语法糖</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-04T15:41:09+08:00">
-                2020-03-04
-              </time>
+              <a href="/2020/03/04/ES6%E2%80%94%E2%80%94class%E8%AF%AD%E6%B3%95%E7%B3%96/" rel="next" title="ES6——class语法糖">
+                <i class="fa fa-chevron-left"></i> ES6——class语法糖
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="ES6—class语法糖"><a href="#ES6—class语法糖" class="headerlink" title="ES6—class语法糖"></a>ES6—class语法糖</h3><blockquote>
-<p>首先，ES6 的 <code>class</code> 属于一种“语法糖”，所以只是写法更加优雅，更加像面对对象的编程，其思想和 ES5 是一致的。</p>
-</blockquote>
-<h5 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Point(x, y) &#123;</span><br><span class="line">  this.x &#x3D; x;</span><br><span class="line">  this.y &#x3D; y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Point.prototype.toString &#x3D; function() &#123;</span><br><span class="line">  return &#96;($&#123;this.x&#125;,$&#123;this.y&#125;)&#96;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">point &#x3D; new Point(4,5);</span><br><span class="line">console.log(point.toString());</span><br></pre></td></tr></table></figure>
-
-<p>等同于</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">  constructor(x, y) &#123;</span><br><span class="line">    this.x &#x3D; x;</span><br><span class="line">    this.y &#x3D; y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">    return &#96;($&#123;this.x&#125;,$&#123;this.y&#125;)&#96;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const point &#x3D; new Point(1,2);</span><br><span class="line">console.log(point.toString());</span><br></pre></td></tr></table></figure>
-
-<p>其中 <code>constructor</code> 方法是类的构造函数，是一个默认方法，通过 <code>new</code> 命令创建对象实例时，自动调用该方法。一个类必须有 <code>constructor</code> 方法，如果没有显式定义，一个默认的 <code>consructor</code> 方法会被默认添加。所以即使你没有添加构造函数，也是会有一个默认的构造函数的。一般 <code>constructor</code> 方法返回实例对象 <code>this</code> ，但是也可以指定 <code>constructor</code> 方法返回一个全新的对象，让返回的实例对象不是该类的实例。</p>
-<h5 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h5><p><code>super</code>关键字，既可以当做函数使用，也可以当作对象使用。这两种情况下，它的用法完全不用</p>
-<h5 id="1-当作函数使用"><a href="#1-当作函数使用" class="headerlink" title="1. 当作函数使用"></a>1. 当作函数使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * ES6要求，子类的构造函数必须</span><br><span class="line">     * 执行一次super()函数，否则会报错</span><br><span class="line">     *&#x2F;</span><br><span class="line">    super();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注：在 <code>constructor</code> 中必须调用 <code>super</code> 方法，因为子类没有自己的 <code>this</code> 对象，而是继承父类的 <code>this</code> 对象，然后对其进行加工,而 <code>super</code> 就代表了父类的构造函数。<code>super</code> 虽然代表了父类 A 的构造函数，但是返回的是子类 B 的实例，即 <code>super</code> 内部的 <code>this</code> 指的是 B，因此 <code>super()</code> 在这里相当于 ```A.prototype.constructor.call(this, props)``。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    console.log(new.target.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">new A(); &#x2F;&#x2F; A</span><br><span class="line">new B(); &#x2F;&#x2F; B</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，在 <code>super()</code> 执行时，它指向的是 子类 B 的构造函数，而不是父类 A 的构造函数。也就是说，<code>super()</code> 内部的 <code>this</code> 指向的是 B。</p>
-<h5 id="2-当作普通对象使用"><a href="#2-当作普通对象使用" class="headerlink" title="2. 当作普通对象使用"></a>2. 当作普通对象使用</h5><p>在普通方法中，指向父类的原型对象；在静态方法中，指向父类。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  c() &#123;</span><br><span class="line">    return 2;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    console.log(super.c()); &#x2F;&#x2F;2</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const b &#x3D; new B();</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，子类 B 当中的 <code>super.c()</code>，就是将 <code>super</code> 当作一个对象使用。这时，<code>super</code> 在普通方法之中，指向 <code>A.prototype</code>，所以 <code>super.c()</code> 就相当于 <code>A.prototype.c()</code>。</p>
-<p><strong>通过 super 调用父类的方法时，super 会绑定子类的 this。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.x &#x3D; 1;</span><br><span class="line">  &#125;</span><br><span class="line">  s() &#123;</span><br><span class="line">    console.log(this.x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    this.x &#x3D; 2;</span><br><span class="line">  &#125;</span><br><span class="line">  m() &#123;</span><br><span class="line">    super.s();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let b &#x3D; new B();</span><br><span class="line">b.m(); &#x2F;&#x2F; 2</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，<code>super.s()</code> 虽然调用的是 <code>A.prototytpe.s()</code>，但是 <code>A.prototytpe.s()</code>会绑定子类 B 的 <code>this</code>，导致输出的是 2，而不是 1。也就是说，实际上执行的是 <code>super.s.call(this)</code>。</p>
-<p><strong>由于绑定子类的 this，所以如果通过 super 对某个属性赋值，这时 super 就是 this，赋值的属性会变成子类实例的属性。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.x &#x3D; 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    this.x &#x3D; 2;</span><br><span class="line">    super.x &#x3D; 3;</span><br><span class="line">    console.log(super.x); &#x2F;&#x2F; undefined</span><br><span class="line">    console.log(this.x); &#x2F;&#x2F; 3</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let b &#x3D; new B();</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，<code>super.x</code> 赋值为 3，这时等同于对 <code>this.x</code> 赋值为 3。而当读取 <code>super.x</code> 的时候，调用的是 <code>A.prototype.x</code>，但并没有 <code>x</code> 方法，所以返回 undefined。</p>
-<p><strong>注意，使用 super 的时候，必须显式指定是作为函数，还是作为对象使用，否则会报错。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;&#125;</span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    console.log(super); &#x2F;&#x2F; 报错</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，<code>console.log(super);</code> 的当中的 <code>super</code>，无法看出是作为函数使用，还是作为对象使用，所以 JavaScript 引擎解析代码的时候就会报错。这是，如果能清晰的表明 <code>super</code> 的数据类型，就不会报错。</p>
-<p><strong>最后，由于对象总是继承其他对象的，所以可以在任意一个对象中，使用 super 关键字</strong></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -564,10 +425,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -575,6 +437,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -595,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -638,6 +513,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript遍历对象的几种方式"><span class="nav-number">1.</span> <span class="nav-text">JavaScript遍历对象的几种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-自身可枚举属性"><span class="nav-number">1.1.</span> <span class="nav-text">1. 自身可枚举属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#来看看一个对象拥有自身和继承属性的例子，Object-keys-只返回自己的属性键"><span class="nav-number">1.1.1.</span> <span class="nav-text">来看看一个对象拥有自身和继承属性的例子，Object.keys()只返回自己的属性键</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Object-values-返回属性值"><span class="nav-number">1.2.</span> <span class="nav-text">2. Object.values()返回属性值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Object-entries"><span class="nav-number">1.3.</span> <span class="nav-text">3.Object.entries()</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可能直接使用这些键值对不怎么方便，但可以通过数组解构赋值方式访问键和值就变得非常容易，如下所示："><span class="nav-number">1.3.1.</span> <span class="nav-text">可能直接使用这些键值对不怎么方便，但可以通过数组解构赋值方式访问键和值就变得非常容易，如下所示：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#当普通对象要转换成-Map-时Object-entries-就很有用，因为-Object-entries-返回的格式与-Map构造函数接受的格式完全相同：-key-value-。"><span class="nav-number">1.3.2.</span> <span class="nav-text">当普通对象要转换成 Map 时Object.entries()就很有用，因为 Object.entries()返回的格式与 Map构造函数接受的格式完全相同：(key,value)。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#让我们看看返回-values（）和-entries（）的-map的方法"><span class="nav-number">1.3.3.</span> <span class="nav-text">让我们看看返回 .values（）和 .entries（）的 map的方法:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-对象属性的顺序"><span class="nav-number">1.4.</span> <span class="nav-text">4. 对象属性的顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-补充"><span class="nav-number">1.5.</span> <span class="nav-text">5. 补充</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JS对象的可枚举属性和不可枚举属性"><span class="nav-number">1.5.1.</span> <span class="nav-text">JS对象的可枚举属性和不可枚举属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#介绍："><span class="nav-number">1.5.2.</span> <span class="nav-text">介绍：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#目前-有四个操作会忽略enumerable为false的属性。"><span class="nav-number">1.5.3.</span> <span class="nav-text">目前,有四个操作会忽略enumerable为false的属性。</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -771,6 +662,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
