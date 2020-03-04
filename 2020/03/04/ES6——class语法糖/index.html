@@ -79,11 +79,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="ES6—class语法糖 首先，ES6 的 class 属于一种“语法糖”，所以只是写法更加优雅，更加像面对对象的编程，其思想和 ES5 是一致的。  例如：1234567891011function Point(x, y) &amp;#123;  this.x &#x3D; x;  this.y &#x3D; y;&amp;#125;Point.prototype.toString &#x3D; functio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6——class语法糖">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/ES6%E2%80%94%E2%80%94class%E8%AF%AD%E6%B3%95%E7%B3%96/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ES6—class语法糖 首先，ES6 的 class 属于一种“语法糖”，所以只是写法更加优雅，更加像面对对象的编程，其思想和 ES5 是一致的。  例如：1234567891011function Point(x, y) &amp;#123;  this.x &#x3D; x;  this.y &#x3D; y;&amp;#125;Point.prototype.toString &#x3D; functio">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-04T07:41:09.000Z">
+<meta property="article:modified_time" content="2020-03-04T07:42:00.814Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/04/ES6——class语法糖/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>ES6——class语法糖 | Hexo</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/04/ES6%E2%80%94%E2%80%94class%E8%AF%AD%E6%B3%95%E7%B3%96/" itemprop="url">ES6——class语法糖</a></h1>
+          <h1 class="post-title" itemprop="name headline">ES6——class语法糖</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <h3 id="ES6—class语法糖"><a href="#ES6—class语法糖" class="headerlink" title="ES6—class语法糖"></a>ES6—class语法糖</h3><blockquote>
+        <h3 id="ES6—class语法糖"><a href="#ES6—class语法糖" class="headerlink" title="ES6—class语法糖"></a>ES6—class语法糖</h3><blockquote>
 <p>首先，ES6 的 <code>class</code> 属于一种“语法糖”，所以只是写法更加优雅，更加像面对对象的编程，其思想和 ES5 是一致的。</p>
 </blockquote>
 <h5 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Point(x, y) &#123;</span><br><span class="line">  this.x &#x3D; x;</span><br><span class="line">  this.y &#x3D; y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Point.prototype.toString &#x3D; function() &#123;</span><br><span class="line">  return &#96;($&#123;this.x&#125;,$&#123;this.y&#125;)&#96;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">point &#x3D; new Point(4,5);</span><br><span class="line">console.log(point.toString());</span><br></pre></td></tr></table></figure>
@@ -334,8 +333,6 @@
 <p>上面代码中，<code>console.log(super);</code> 的当中的 <code>super</code>，无法看出是作为函数使用，还是作为对象使用，所以 JavaScript 引擎解析代码的时候就会报错。这是，如果能清晰的表明 <code>super</code> 的数据类型，就不会报错。</p>
 <p><strong>最后，由于对象总是继承其他对象的，所以可以在任意一个对象中，使用 super 关键字</strong></p>
 
-          
-        
       
     </div>
     
@@ -352,12 +349,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -367,10 +364,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -378,6 +376,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -398,8 +400,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -441,6 +452,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6—class语法糖"><span class="nav-number">1.</span> <span class="nav-text">ES6—class语法糖</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#例如："><span class="nav-number">1.0.1.</span> <span class="nav-text">例如：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#super关键字"><span class="nav-number">1.0.2.</span> <span class="nav-text">super关键字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-当作函数使用"><span class="nav-number">1.0.3.</span> <span class="nav-text">1. 当作函数使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-当作普通对象使用"><span class="nav-number">1.0.4.</span> <span class="nav-text">2. 当作普通对象使用</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -574,6 +601,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
